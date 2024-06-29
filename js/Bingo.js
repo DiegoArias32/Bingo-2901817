@@ -1,5 +1,5 @@
 /**
- * función Bingo
+ * Proyecto Bingo
  * autores: Diego De Jesus Arias Gonzalez
  * Santiago Gonzalez Vasquez
  * Juan Esteban Huertas

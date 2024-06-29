@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suma</title>
+    <title>Bingo</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
@@ -11,37 +11,95 @@
 
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+<img src="./img/bingo-title.png" alt="Titulo bingo" title="Palabra bingo con diferentes colores" class="header__title js-header__title">
 <body>
     <div class="container">
         <div class="forma row col-10">
-            <div class="formulario col-7">
-                <form class="row g-3 needs-validation" onsubmit="return suma();" novalidate >
-                    <div class="col-md-12">
-                      <label for="txtNumeroUno" class="form-label">Numero Uno</label>
-                      <input type="number" class="form-control" id="txtNumeroUno" required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                    </div>
-
-                    <div class="col-md-12">
-                      <label for="txtNumeroDos" class="form-label">Numero Dos</label>
-                      <input type="number" class="form-control" id="txtNumeroDos" required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <button class="btn btn-primary" type="submit" onclick="suma()">Sumar <i class="fa-solid fa-calculator"></i></button>
-                    </div>
-                  </form>
-            </div>
-            <div class="respuesta col-3">
-              <h4>Suma</h4>
-              <div id="suma"></div>
+          <div class="formulario col-7">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="row">
+                <div class="col-2 text-center">
+                  <span class="titulo-bingo">B</span>
+                  <div class="row">
+                    <div class="col-12 B" data-numero=""></div>
+                    <div class="col-12 B" data-numero=""></div>
+                    <div class="col-12 B" data-numero=""></div>
+                    <div class="col-12 B" data-numero=""></div>
+                  </div>
+                </div>
+                <div class="col-2 text-center">
+                  <span class="titulo-bingo">I</span>
+                  <div class="row">
+                    <div class="col-12 I" data-numero=""></div>
+                    <div class="col-12 I" data-numero=""></div>
+                    <div class="col-12 I" data-numero=""></div>
+                    <div class="col-12 I" data-numero=""></div>
+                  </div>
+                </div>
+                <div class="col-2 text-center">
+                  <span class="titulo-bingo">N</span>
+                  <div class="row">
+                    <div class="col-12 N" data-numero=""></div>
+                    <div class="col-12 N" data-numero=""></div>
+                    <div class="col-12 N" data-numero=""></div>
+                    <div class="col-12 N" data-numero=""></div>
+                  </div>
+                </div>
+                <div class="col-2 text-center">
+                  <span class="titulo-bingo">G</span>
+                  <div class="row">
+                    <div class="col-12 G" data-numero=""></div>
+                    <div class="col-12 G" data-numero=""></div>
+                    <div class="col-12 G" data-numero=""></div>
+                    <div class="col-12 G" data-numero=""></div>
+                  </div>
+                </div>
+                <div class="col-2 text-center">
+                  <span class="titulo-bingo">O</span>
+                  <div class="row">
+                    <div class="col-12 O" data-numero=""></div>
+                    <div class="col-12 O" data-numero=""></div>
+                    <div class="col-12 O" data-numero=""></div>
+                    <div class="col-12 O" data-numero=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button id="play-button">Play</button>
+                <button id="stop-button" disabled>Stop</button>                
+              </div>
+            </form>
           </div>
-        </div>      
+          <div class="respuesta col-3">
+            <span class="titulo-bingo-2">B</span>
+            <div id="respuesta-B"></div>
+            <speech id="speech-B"></speech>
+          </div>
+          
+          <div class="respuesta col-3">
+            <span class="titulo-bingo-2">I</span>
+            <div id="respuesta-I"></div>
+            <speech id="speech-I"></speech>
+          </div>
+          
+          <div class="respuesta col-3">
+            <span class="titulo-bingo-2">N</span>
+            <div id="respuesta-N"></div>
+            <speech id="speech-N"></speech>
+          </div>
+          
+          <div class="respuesta col-3">
+            <span class="titulo-bingo-2">G</span>
+            <div id="respuesta-G"></div>
+            <speech id="speech-G"></speech>
+          </div>
+          
+          <div class="respuesta col-3">
+            <span class="titulo-bingo-2">O</span>
+            <div id="respuesta-O"></div>
+            <speech id="speech-O"></speech>
+          </div>
+        </div>   
     </div>
 
     <script src="js/validate.js"></script>
